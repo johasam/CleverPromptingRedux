@@ -10,13 +10,13 @@ The notebooks are hosted as a JupyterLite site on GitHub Pages:
 
 ## Notebooks
 
-| # | Notebook | Topic |
-|---|----------|-------|
-| 01 | Basic Calls | Simple API calls and structured output with Pydantic |
-| 02 | Self-Consistency | Running the same prompt N times and aggregating results |
-| 03 | LLM Judges | Using an LLM to score summary quality against a reference |
-| 04 | Token Probability | Inspecting token-level log probabilities and alternatives |
-| 05 | Function Calling | Multi-step tool use with a calculator function |
+| #   | Notebook          | Topic                                                     |
+| --- | ----------------- | --------------------------------------------------------- |
+| 01  | Basic Calls       | Simple API calls and structured output with Pydantic      |
+| 02  | Self-Consistency  | Running the same prompt N times and aggregating results   |
+| 03  | LLM Judges        | Using an LLM to score summary quality against a reference |
+| 04  | Token Probability | Inspecting token-level log probabilities and alternatives |
+| 05  | Function Calling  | Multi-step tool use with a calculator function            |
 
 ## Project Structure
 
@@ -35,21 +35,6 @@ clever-prompting/
 ├── prompting_through_code/     # Original Python scripts
 └── README.md
 ```
-
-## Deployment
-
-The site is automatically deployed via GitLab CI/CD:
-
-1. **Build stage**: Installs `jupyterlite-core` and builds the static site from `content/`
-2. **Deploy stage**: Pushes the built site to the `gh-pages` branch of the GitHub repository using an SSH deploy key
-
-### Setup Requirements
-
-1. **GitLab CI/CD Variable**: Add the SSH private key as a CI/CD variable named `GITHUB_DEPLOY_KEY` (type: File or Variable, protected, masked).
-
-2. **GitHub Deploy Key**: Add the corresponding public key as a deploy key on the GitHub repository (`Settings > Deploy keys`) with **write access** enabled.
-
-3. **GitHub Pages**: Configure the repository to serve GitHub Pages from the `gh-pages` branch.
 
 ## Local Build
 
